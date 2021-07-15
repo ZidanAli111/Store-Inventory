@@ -67,12 +67,17 @@ public class EditorActivity extends AppCompatActivity {
     private boolean savePet() {
 
         int quantity;
+
         String nameString = mProductNameEditText.getText().toString().trim();
         String modelString = mModelNameEditText.getText().toString().trim();
         String quantityString = mQuantityEditText.getText().toString().trim();
         String priceString = mProductPriceEditText.getText().toString().trim();
         String supplierNameString = mSupplierNameEditText.getText().toString().trim();
         String supplierEmailString = mSupplierEmailEditText.getText().toString().trim();
+
+
+
+
 
         ContentValues contentValues = new ContentValues();
         if (TextUtils.isEmpty(nameString)) {
@@ -107,6 +112,7 @@ public class EditorActivity extends AppCompatActivity {
         contentValues.put(ProductEntry.COLUMN_PRODUCT_GRADE, mGrade);
         contentValues.put(ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME, supplierNameString);
         contentValues.put(ProductEntry.COLUMN_SUPPLIER_EMAIL, supplierEmailString);
+        hasAllRequiredValues=true;
         return hasAllRequiredValues;
     }
 
