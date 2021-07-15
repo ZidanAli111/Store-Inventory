@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sigma.gaming.storeinventory">
-
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,10 +17,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".EditorActivity"
+            android:parentActivityName=".CatalogActivity"
+            android:theme="@style/EditorTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CatalogActivity" />
+        </activity>
+
         <provider
-            android:authorities="sigma.gaming.product"
             android:name="sigma.gaming.storeinventory.data.ProductProvider"
-            android:exported="false"/>
+            android:authorities="sigma.gaming.product"
+            android:exported="false" />
     </application>
 
 </manifest>

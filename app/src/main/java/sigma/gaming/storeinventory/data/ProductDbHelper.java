@@ -26,15 +26,15 @@ public class ProductDbHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_PRODUCTS_TABLE = "CREATE TABLE " +
                 ProductEntry.TABLE_NAME + "(" +
-                ProductEntry._ID + "INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                ProductEntry.COLUMN_PRODUCT_NAME + "TEXT NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_MODEL + "TEXT, " +
-                ProductEntry.COLUMN_PRODUCT_PRICE + "REAL NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_PICTURE + "TEXT NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_GRADE + "INTEGER NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME + "TEXT NOT NULL, " +
-                ProductEntry.COLUMN_SUPPLIER_EMAIL + "TEXT NOT NULL, " +
-                ProductEntry.COLUMN_PRODUCT_QUANTITY + "INTEGER DEFAULT 0);";
+                ProductEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                ProductEntry.COLUMN_PRODUCT_NAME + " TEXT NOT NULL, " +
+                ProductEntry.COLUMN_PRODUCT_MODEL + " TEXT, " +
+                ProductEntry.COLUMN_PRODUCT_PRICE + " REAL NOT NULL, " +
+                ProductEntry.COLUMN_PRODUCT_PICTURE + " TEXT NOT NULL, " +
+                ProductEntry.COLUMN_PRODUCT_GRADE + " INTEGER NOT NULL, " +
+                ProductEntry.COLUMN_PRODUCT_SUPPLIER_NAME + " TEXT NOT NULL, " +
+                ProductEntry.COLUMN_SUPPLIER_EMAIL + " TEXT NOT NULL, " +
+                ProductEntry.COLUMN_PRODUCT_QUANTITY + " INTEGER DEFAULT 0);";
         Log.v(LOG_TAG, SQL_CREATE_PRODUCTS_TABLE);
 
         db.execSQL(SQL_CREATE_PRODUCTS_TABLE);
