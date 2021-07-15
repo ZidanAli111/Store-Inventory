@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:authorities="sigma.gaming.product"
+            android:name="sigma.gaming.storeinventory.data.ProductProvider"
+            android:exported="false"/>
     </application>
 
 </manifest>
